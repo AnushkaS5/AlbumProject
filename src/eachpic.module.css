@@ -1,0 +1,15 @@
+
+.album {
+    border: 5px solid pink;
+    width: 350px; /* Adjust width to ensure three items per row with space between */
+    height: 450px; /* Ensure height is auto to fit content */
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    
+    overflow: hidden;
+    overflow-wrap:anywhere;
+    flex-direction: row; 
+    cursor: pointer;/* Ensures padding is included in the total width and height */
+  }
+  
