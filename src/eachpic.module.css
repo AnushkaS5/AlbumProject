@@ -1,8 +1,8 @@
-
+/* 
 .album {
     border: 5px solid pink;
-    width: 350px; /* Adjust width to ensure three items per row with space between */
-    height: 450px; /* Ensure height is auto to fit content */
+    width: 350px; 
+    height: 450px;
     padding: 5px;
     margin: 10px;
     box-sizing: border-box;
@@ -10,6 +10,69 @@
     overflow: hidden;
     overflow-wrap:anywhere;
     flex-direction: row; 
-    cursor: pointer;/* Ensures padding is included in the total width and height */
+    cursor: pointer;
+  }
+   */
+   .album {
+    border: 1px solid #ccc; /* Lighter border */
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Sober light background color */
+    border-radius: 10px; /* Smooth rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure buttons stay at the bottom */
+    text-align: center;
+    color: #333; /* Darker text for better visibility */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    overflow-wrap:anywhere; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Soft shadow for depth */
   }
   
+  .album h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .album h4 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666; /* Muted color for subheading */
+  }
+  
+  .del, .mod {
+    display: inline-block;
+  }
+  
+  .del img, .mod img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    padding: 30px;
+  }
+  .buttonContainer {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Add some space above the buttons */
+  }
+  
+  .buttonText {
+    margin-right: 5px; /* Space between text and button */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: 800;
+    padding:10px;
+  }
+  
+  .album button {
+    cursor: pointer;
+    margin-top: auto; /* Keep buttons at the bottom */
+  }
+  .album:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }

@@ -6,8 +6,9 @@ import AlbumContent from './albumContent';
 function AddForm() {
   const [formData, setFormData] = useState({ title: "", body: "" });
   const [pic, setPic] = useState(false);
+  //const[album,setAlbum]=useState('');
   const [album, setAlbum] = useState(() => {
-    const savedAlbum = localStorage.getItem('album');
+    const savedAlbum = localStorage.getItem('albums');
     return savedAlbum ? JSON.parse(savedAlbum) : [];
   });
   const [isModifyMode, setIsModifyMode] = useState(false);
@@ -28,7 +29,7 @@ function AddForm() {
   };
 
   useEffect(() => {
-    localStorage.setItem('album', JSON.stringify(album));
+    localStorage.setItem('albums', JSON.stringify(album));
   }, [album]);
 
   const clear = () => {
